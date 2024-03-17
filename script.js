@@ -19,7 +19,7 @@ function getLoudness() {
         // Map the average loudness to a value between 1 and 10
         var loudnessValue = Math.round((average / 255) * 9) + 1;
         console.log('Loudness:', loudnessValue);
-
+        document.getElementById("num").innerHTML=loudnessValue
         if (loudnessValue > 20) {
           const candles = document.getElementById('candles');
           candles.lastChild.remove()
